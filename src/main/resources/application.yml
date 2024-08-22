@@ -1,0 +1,26 @@
+spring.application.name: mybookshelf
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 712812801362-647pooav31sfa47lejk28vvgosvc585t.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth?access_type=offline
