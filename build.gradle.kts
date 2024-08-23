@@ -54,7 +54,7 @@ dependencies {
     // oauth2 client
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 
-    // openfeign
+    // openfeign - 구글 서버에 요청으랗때 쓴다
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.1.2")
 
 
