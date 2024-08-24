@@ -48,6 +48,7 @@ class SecurityConfig {
             .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter::class.java)
             .authorizeHttpRequests { authorize ->
                 authorize
+                    .requestMatchers("/bookshelves", "/bookshelves/**").permitAll()
                     .requestMatchers("/", "/login/**").permitAll()
                     .requestMatchers("/authenticate").permitAll()
                     .requestMatchers("/books", "/books/**").permitAll()
